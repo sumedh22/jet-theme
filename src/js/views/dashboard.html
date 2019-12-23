@@ -1,0 +1,20 @@
+<!--
+ Copyright (c) 2014, 2019, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <oj-button class="oj-button-primary">submit</oj-button>
+  <oj-button >secondary</oj-button>
+  <oj-form-layout>
+    <oj-input-text labelHint="Name"></oj-input-text>
+    <oj-input-text labelHint="Address"></oj-input-text>
+    <oj-input-number labelHint="Phone"></oj-input-number>
+  </oj-form-layout>
+  <oj-list-view data="[[listData]]">
+    <template slot="itemTemplate">
+<h3>
+  <oj-bind-text value="[[$current.data.name]]"></oj-bind-text>
+</h3>
+    </template>
+  </oj-list-view>
+</div>
